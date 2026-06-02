@@ -6,14 +6,14 @@ def get_all_soldiers():
     return soldiers
 
 
-def get_soldier(id: int):
+def get_soldier(id_: int):
     soldiers = load_json()
     
     if not soldiers:
         raise HTTPException(404, "There is not soldiers in data")
     
     for soldier in soldiers:
-        if soldier["id_Personal"] == id:
+        if soldier["id_Personal"] == id_:
             return soldier
     raise HTTPException(500, "ID is not exists")
 
@@ -30,13 +30,25 @@ def create_soldier(new_soldier: dict):
     #     return True
     # return False
 
-def update_soldier(id: int, updated_soldier: dict):
+def update_soldier(id_: int, updated_soldier: dict):
     soldiers = load_json()
     
     for soldier in soldiers:
-        if soldier["id"] == id:
+        if soldier["id"] == id_:
             soldiers.update(updated_soldier)
             save_json(soldiers)
             break
     else:
         raise HTTPException(404, "ID soldier is not exists")
+    
+
+def delete_soldier(id_: int):
+    soldiers = load_json()
+
+    updated_soldiers = [soldier for soldier in soldiers if soldier["id"] != id_]
+
+    if len(soldiers) == len(updated_soldiers):
+        raise HTTPException(404, f"ID: {id_} is not found")
+    
+    soldiers.update(updated_soldiers)
+    save_json(soldiers)
