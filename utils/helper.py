@@ -29,3 +29,14 @@ def create_soldier(new_soldier: dict):
     # if data:
     #     return True
     # return False
+
+def update_soldier(id: int, updated_soldier: dict):
+    soldiers = load_json()
+    
+    for soldier in soldiers:
+        if soldier["id"] == id:
+            soldiers.update(updated_soldier)
+            save_json(soldiers)
+            break
+    else:
+        raise HTTPException(404, "ID soldier is not exists")
