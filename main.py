@@ -1,6 +1,7 @@
 from logger_config import logger
 from utils.helper import get_all_soldiers
 from utils.helper import get_soldier
+from utils.helper import create_soldier
 from fastapi import FastAPI, HTTPException
 import json
 
@@ -35,3 +36,14 @@ def get_soldier_endpoint(id_: int):
     except json.JSONDecodeError:
         logger.error("JSON file is empty")
         raise HTTPException(500, "Invalid server error")
+    
+
+@app.post("/api/soldiers", status_code=201)
+def create_soldier_endpoint(new_soldier: dict):
+    try:
+        create_soldier(new_soldier)
+        return {"Messege": "Soldier created successfully"}
+    
+    except json.JSONDecodeError:
+        logger.error(f"File json is empty")
+        raise HTTPException(500, "Internal Server Error")
