@@ -1,0 +1,68 @@
+2026-06-02 14:48:37,772 | INFO | Return 1 data
+2026-06-02 16:04:22,154 | INFO | Return 1 soldiers
+2026-06-02 16:04:35,349 | ERROR | Invalid file
+2026-06-02 16:04:50,423 | ERROR | Invalid file
+2026-06-02 16:13:26,072 | ERROR | Invalid file
+2026-06-02 16:13:46,672 | ERROR | Invalid file
+2026-06-02 16:13:48,465 | ERROR | Invalid file
+2026-06-02 16:14:13,441 | INFO | Return 1 soldiers
+2026-06-02 16:14:15,608 | INFO | Return 1 soldiers
+2026-06-02 16:24:41,112 | ERROR | JSON file is empty
+2026-06-02 16:26:36,903 | ERROR | JSON file is empty
+2026-06-02 16:52:02,251 | ERROR | JSON file is empty
+2026-06-02 16:52:37,897 | INFO | Return 1 soldiers
+2026-06-02 16:56:19,721 | INFO | Return 1 soldiers
+2026-06-02 16:59:55,912 | INFO | Return 1 soldiers
+2026-06-02 16:59:55,922 | WARNING | ID is not exists
+2026-06-02 17:00:10,332 | INFO | Return 1 soldiers
+2026-06-02 17:00:10,333 | INFO | Find user with DI: 1
+2026-06-02 17:01:22,769 | INFO | Return 1 soldiers
+2026-06-02 17:02:05,920 | INFO | Return 1 soldiers
+2026-06-02 17:02:05,921 | INFO | Find user with DI: 1
+2026-06-02 17:06:43,796 | INFO | Return 1 soldiers
+2026-06-02 17:06:43,797 | INFO | Find user with DI: 1
+2026-06-02 17:15:56,908 | INFO | Return 1 soldiers
+2026-06-02 17:16:07,696 | INFO | Return 1 soldiers
+2026-06-02 17:18:49,672 | INFO | Return 1 soldiers
+2026-06-02 17:19:43,786 | INFO | Return 1 soldiers
+2026-06-02 17:19:43,794 | INFO | Save 2 soldiers
+2026-06-02 17:33:07,479 | INFO | Return 2 soldiers
+2026-06-02 17:33:07,479 | INFO | Find user with DI: 1
+2026-06-02 17:34:18,695 | INFO | Try to update file
+2026-06-02 17:34:18,696 | INFO | Return 2 soldiers
+2026-06-02 17:34:18,696 | INFO | Find user with DI: 1
+2026-06-02 17:34:33,208 | INFO | Try to update file
+2026-06-02 17:34:33,209 | INFO | Return 2 soldiers
+2026-06-02 17:34:33,209 | INFO | Find user with DI: 1
+2026-06-02 17:36:48,708 | INFO | Return 2 soldiers
+2026-06-02 17:36:48,709 | INFO | Find user with DI: 1
+2026-06-02 17:39:23,200 | INFO | Return 2 soldiers
+2026-06-02 17:39:23,201 | INFO | Find user with DI: 1
+2026-06-02 17:42:25,160 | INFO | Return 2 soldiers
+2026-06-02 17:42:25,160 | INFO | Find user with DI: 1
+2026-06-02 17:58:43,757 | INFO | Try to update file
+2026-06-02 17:58:43,776 | INFO | Return 2 soldiers
+2026-06-02 17:58:43,776 | WARNING | ID is not exists
+2026-06-02 17:58:52,885 | INFO | Try to update file
+2026-06-02 17:58:52,886 | INFO | Return 2 soldiers
+2026-06-02 17:58:52,893 | INFO | Save 2 soldiers
+2026-06-02 17:58:52,893 | WARNING | ID is not exists
+2026-06-02 17:59:18,243 | INFO | Try to update file
+2026-06-02 17:59:18,244 | INFO | Return 2 soldiers
+2026-06-02 17:59:18,256 | INFO | Save 2 soldiers
+2026-06-02 17:59:18,256 | WARNING | ID is not exists
+2026-06-02 18:15:54,539 | INFO | Try to update file
+2026-06-02 18:15:54,541 | INFO | Return 2 soldiers
+2026-06-02 18:15:54,555 | INFO | Save 2 soldiers
+2026-06-02 18:15:54,555 | WARNING | ID is not exists
+2026-06-02 18:25:02,651 | INFO | Try to update file
+2026-06-02 18:25:02,653 | INFO | Return 2 soldiers
+2026-06-02 18:25:02,665 | INFO | Save 2 soldiers
+2026-06-02 18:26:30,861 | INFO | Try to update file
+2026-06-02 18:26:30,862 | INFO | Return 2 soldiers
+2026-06-02 18:26:30,863 | WARNING | ID is not exists
+2026-06-02 18:33:03,899 | INFO | Try to delete soldier: 1
+2026-06-02 18:35:52,462 | INFO | Return 2 soldiers
+2026-06-02 18:35:52,462 | INFO | Find user with DI: 1
+2026-06-02 18:35:52,474 | INFO | Save 1 soldiers
+2026-06-02 18:35:52,475 | INFO | Delete soldier: 1
