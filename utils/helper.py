@@ -5,6 +5,7 @@ def get_all_soldiers():
     soldiers = load_json()
     return soldiers
 
+
 def get_soldier(id: int):
     soldiers = load_json()
     
@@ -15,3 +16,16 @@ def get_soldier(id: int):
         if soldier["id_Personal"] == id:
             return soldier
     raise HTTPException(500, "ID is not exists")
+
+
+def create_soldier(new_soldier: dict):
+    soldiers = load_json()
+    soldier_id = max([soldier for soldier in soldiers]) + 1 if soldiers else 1
+
+    new_soldier = {"id": soldier_id, **new_soldier}
+    soldiers.update(new_soldier)
+
+    save_json(soldiers)
+    # if data:
+    #     return True
+    # return False
