@@ -3,6 +3,7 @@ from utils.helper import get_all_soldiers
 from utils.helper import get_soldier
 from utils.helper import create_soldier
 from utils.helper import update_soldier
+from utils.helper import delete_soldier
 from fastapi import FastAPI, HTTPException
 import json
 
@@ -53,9 +54,9 @@ def create_soldier_endpoint(new_soldier: dict):
 @app.put("/api/soldiers/{id_}")
 def update_soldier_endpoint(id_: int, new_soldier: dict):
     try:
-        logger.info("Try to update file")
         update_soldier(id_, new_soldier)
-        return {"Message": f"Soldier update successfully {id_}"}
+        logger.info("Update soldier")
+        return {"Message": f"Soldier {id_} update successfully"}
     
     except KeyError:
         logger.warning("ID is not exists")
@@ -65,6 +66,26 @@ def update_soldier_endpoint(id_: int, new_soldier: dict):
         logger.error("File is not exists")
         raise HTTPException(404, "File is not found")
     
+    except json.JSONDecodeError:
+        logger.error("JSON file is empty")
+        raise HTTPException(500, "Invalid server error")
+    
+
+@app.delete("/api/soldiers/{id_}")
+def delete_soldier_endpoint(id_: int):
+    try:
+        delete_soldier(id_)
+        logger.info(f"Delete soldier: {id_}")
+        return {"Message": f"Soldier {id_} deleted successfully"}
+    
+    except KeyError:
+        logger.warning("ID is not exists")
+        raise HTTPException(400, f"ID: {id_} is not found")
+
+    except FileNotFoundError:
+        logger.error("File is not exists")
+        raise HTTPException(404, "File is not found")
+
     except json.JSONDecodeError:
         logger.error("JSON file is empty")
         raise HTTPException(500, "Invalid server error")
