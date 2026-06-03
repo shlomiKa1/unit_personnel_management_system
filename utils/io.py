@@ -15,8 +15,7 @@ def load_json():
                 logger.warning(f"File {FILENAME} is empty")
             logger.info(f"Return {len(data)} soldiers")
             return data
-    raise FileNotFoundError("Error file is not exists")
-
+        
 
 def save_json(soldiers: list[dict]):
     if not soldiers:
@@ -25,4 +24,3 @@ def save_json(soldiers: list[dict]):
     with open(FILENAME, "w", encoding="utf-8") as f:
         json.dump(soldiers, f, indent=2)
     logger.info(f"Save {len(soldiers)} soldiers")
-
