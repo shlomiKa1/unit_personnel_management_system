@@ -14,9 +14,10 @@ app = FastAPI()
 def get_all_soldiers_endpoint():
     try:
         return get_all_soldiers()
+    
     except FileNotFoundError:
         logger.error("File is not exists")
-        raise HTTPException(404, "File is not found")
+        raise HTTPException(500, "Internal Server Error")
     
     except json.JSONDecodeError:
         logger.error("JSON file is empty")
@@ -29,11 +30,11 @@ def get_soldier_endpoint(id_: int):
         return get_soldier(id_)
     except KeyError:
         logger.warning("ID is not exists")
-        raise HTTPException(400, f"ID: {id_} is not found")
+        raise HTTPException(404, f"ID: {id_} is not found")
 
     except FileNotFoundError:
         logger.error("File is not exists")
-        raise HTTPException(404, "File is not found")
+        raise HTTPException(500, "Internal Server Error")
     
     except json.JSONDecodeError:
         logger.error("JSON file is empty")
@@ -45,6 +46,10 @@ def create_soldier_endpoint(new_soldier: dict):
     try:
         create_soldier(new_soldier)
         return {"Messege": "Soldier created successfully"}
+    
+    except FileNotFoundError:
+        logger.error("File is not exists")
+        raise HTTPException(500, "Internal Server Error")
     
     except json.JSONDecodeError:
         logger.error(f"File json is empty")
@@ -60,11 +65,11 @@ def update_soldier_endpoint(id_: int, new_soldier: dict):
     
     except KeyError:
         logger.warning("ID is not exists")
-        raise HTTPException(400, f"ID: {id_} is not found")
+        raise HTTPException(404, f"ID: {id_} is not found")
 
     except FileNotFoundError:
         logger.error("File is not exists")
-        raise HTTPException(404, "File is not found")
+        raise HTTPException(500, "Internal Server Error")
     
     except json.JSONDecodeError:
         logger.error("JSON file is empty")
@@ -80,11 +85,11 @@ def delete_soldier_endpoint(id_: int):
     
     except KeyError:
         logger.warning("ID is not exists")
-        raise HTTPException(400, f"ID: {id_} is not found")
+        raise HTTPException(404, f"ID: {id_} is not found")
 
     except FileNotFoundError:
         logger.error("File is not exists")
-        raise HTTPException(404, "File is not found")
+        raise HTTPException(500, "Internal Server Error")
 
     except json.JSONDecodeError:
         logger.error("JSON file is empty")
