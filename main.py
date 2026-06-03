@@ -1,5 +1,5 @@
 from logger_config import logger
-from utils.helper import get_all_soldiers, get_soldier, create_soldier, update_soldier, delete_soldier
+from utils.helper import Soldier, get_all_soldiers, get_soldier, create_soldier, update_soldier, delete_soldier
 from fastapi import FastAPI, HTTPException
 import json
 
@@ -40,7 +40,7 @@ def get_soldier_endpoint(id_: int):
     
 
 @app.post("/api/soldiers", status_code=201)
-def create_soldier_endpoint(new_soldier: dict):
+def create_soldier_endpoint(new_soldier: Soldier):
     try:
         logger.info("Create a new soldier")
         create_soldier(new_soldier)
@@ -56,7 +56,7 @@ def create_soldier_endpoint(new_soldier: dict):
     
 
 @app.put("/api/soldiers/{id_}")
-def update_soldier_endpoint(id_: int, new_soldier: dict):
+def update_soldier_endpoint(id_: int, new_soldier: Soldier):
     try:
         logger.info("Update soldier with ID: '%s'", id_)
         update_soldier(id_, new_soldier)

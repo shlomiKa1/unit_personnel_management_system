@@ -2,21 +2,25 @@
   {
     "id": 1,
     "name": "John Doe",
-    "email": "john.doe@example.com"
+    "email": "john.doe@example.com",
+    "address": "12 Rothschild Boulevard, Tel Aviv"
   },
   {
     "id": 2,
     "name": "Jane Smith",
-    "email": "jane.smith@example.com"
+    "email": "jane.smith@example.com",
+    "address": "45 Jaffa Street, Jerusalem"
   },
   {
     "id": 3,
     "name": "David Miller",
-    "email": "david.miller@example.com"
+    "email": "david.miller@example.com",
+    "address": "8 Hanasi Avenue, Haifa"
   },
   {
     "id": 4,
     "name": "Sarah Connor",
-    "email": "sarah.connor@example.com"
+    "email": "sarah.connor@example.com",
+    "address": "23 Ben Gurion Street, Be'er Sheva"
   }
 ]

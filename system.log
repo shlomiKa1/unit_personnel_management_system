@@ -73,3 +73,17 @@
 2026-06-03 07:43:16,201 | INFO | Update soldier with ID: '8'
 2026-06-03 07:43:16,203 | INFO | Return '4' soldiers
 2026-06-03 07:43:16,204 | WARNING | ID: '8' is not exists
+2026-06-03 08:47:15,419 | INFO | Update soldier with ID: '1'
+2026-06-03 08:47:15,420 | INFO | Return '4' soldiers
+2026-06-03 08:47:15,420 | INFO | Find user with DI: '1'
+2026-06-03 08:47:15,430 | INFO | Save '4' soldiers
+2026-06-03 08:48:32,600 | INFO | Get soldier by ID: '1'
+2026-06-03 08:48:32,602 | INFO | Return '4' soldiers
+2026-06-03 08:48:32,603 | INFO | Find user with DI: '1'
+2026-06-03 08:48:59,573 | INFO | Get soldier by ID: '1'
+2026-06-03 08:48:59,574 | INFO | Return '4' soldiers
+2026-06-03 08:48:59,575 | INFO | Find user with DI: '1'
+2026-06-03 08:49:14,894 | INFO | Update soldier with ID: '1'
+2026-06-03 08:49:14,894 | INFO | Return '4' soldiers
+2026-06-03 08:49:14,894 | INFO | Find user with DI: '1'
+2026-06-03 08:49:14,907 | INFO | Save '4' soldiers

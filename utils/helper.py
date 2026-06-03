@@ -1,8 +1,17 @@
 from utils.io import load_json, save_json
 from logger_config import logger
+from pydantic import BaseModel
 
 
-def soldier_by_id(id_: int, soldiers: list[dict]):
+class Soldier(BaseModel):
+    id: int
+    name: str
+    email: str
+    address: str
+
+
+def soldier_by_id(id_: int, soldiers: Soldier):
+    """The """
     for soldier in soldiers:
         if soldier["id"] == id_:
             logger.info("Find user with DI: '%s'", id_)
@@ -20,7 +29,7 @@ def get_soldier(id_: int):
     return soldier_by_id(id_, soldiers)
 
 
-def create_soldier(new_soldier: dict):
+def create_soldier(new_soldier: Soldier):
     soldiers = load_json()
     soldier_id = max([soldier["id"] for soldier in soldiers]) + 1 if soldiers else 1
 
@@ -30,7 +39,7 @@ def create_soldier(new_soldier: dict):
     save_json(soldiers)
 
 
-def update_soldier(id_: int, updated_soldier: dict):
+def update_soldier(id_: int, updated_soldier: Soldier):
     soldiers = load_json()
         
     soldier = soldier_by_id(id_, soldiers)
