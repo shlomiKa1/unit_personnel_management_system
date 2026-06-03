@@ -87,3 +87,20 @@
 2026-06-03 08:49:14,894 | INFO | Return '4' soldiers
 2026-06-03 08:49:14,894 | INFO | Find user with DI: '1'
 2026-06-03 08:49:14,907 | INFO | Save '4' soldiers
+2026-06-03 10:11:19,927 | INFO | Get soldier by ID: '1'
+2026-06-03 10:11:19,950 | INFO | Return '4' soldiers
+2026-06-03 10:11:19,951 | INFO | Find user with DI: '1'
+2026-06-03 10:11:26,138 | INFO | Get soldier by ID: '9'
+2026-06-03 10:11:26,139 | INFO | Return '4' soldiers
+2026-06-03 10:11:26,140 | ERROR | ID: '9' is not found
+2026-06-03 10:12:17,070 | INFO | Get soldier by ID: '9'
+2026-06-03 10:12:17,072 | INFO | Return '4' soldiers
+2026-06-03 10:12:17,074 | ERROR | ID: '9' is not found
+2026-06-03 10:16:30,007 | INFO | Get all soldiers
+2026-06-03 10:16:30,008 | INFO | Return '4' soldiers
+2026-06-03 10:19:07,239 | INFO | Get soldier by ID: '9'
+2026-06-03 10:19:07,240 | INFO | Return '4' soldiers
+2026-06-03 10:19:07,241 | ERROR | ID: '9' is not found
+2026-06-03 10:27:27,121 | INFO | Get soldier by ID: '9'
+2026-06-03 10:27:27,122 | INFO | Return '4' soldiers
+2026-06-03 10:27:27,123 | ERROR | ID: '9' is not found

@@ -1,5 +1,6 @@
 from utils.io import load_json, save_json
 from logger_config import logger
+from fastapi import HTTPException
 from pydantic import BaseModel
 
 
@@ -10,22 +11,19 @@ class Soldier(BaseModel):
     address: str
 
 
-def soldier_by_id(id_: int, soldiers: Soldier):
-    for soldier in soldiers:
-        if soldier["id"] == id_:
-            logger.info("Find user with DI: '%s'", id_)
-            return soldier
-    raise ValueError(f"ID: '{id_}' is not found")
-
-
 def get_all_soldiers():
     soldiers = load_json()
     return soldiers
 
 
-def get_soldier(id_: int):
+def get_soldier_by_id(id_: int):
     soldiers = load_json()
-    return soldier_by_id(id_, soldiers)
+
+    for soldier in soldiers:
+        if soldier["id"] == id_:
+            logger.info("Find user with DI: '%s'", id_)
+            return soldier
+    raise HTTPException(404, f"ID: '{id_}' is not found")
 
 
 def create_soldier(new_soldier: Soldier):
@@ -41,7 +39,7 @@ def create_soldier(new_soldier: Soldier):
 def update_soldier(id_: int, updated_soldier: Soldier):
     soldiers = load_json()
         
-    soldier = soldier_by_id(id_, soldiers)
+    soldier = soldier_by_id(id_)
     soldier.update(updated_soldier)
 
     save_json(soldiers)
