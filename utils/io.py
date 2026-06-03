@@ -12,8 +12,8 @@ def load_json():
             data = json.load(file)
             
             if len(data) == 0:
-                logger.warning(f"File {FILENAME} is empty")
-            logger.info(f"Return {len(data)} soldiers")
+                logger.warning("File '%s' is empty", FILENAME)
+            logger.info("Return '%s' soldiers", len(data))
             return data
         
 
@@ -23,4 +23,4 @@ def save_json(soldiers: list[dict]):
 
     with open(FILENAME, "w", encoding="utf-8") as f:
         json.dump(soldiers, f, indent=2)
-    logger.info(f"Save {len(soldiers)} soldiers")
+    logger.info("Save '%s' soldiers", len(soldiers))

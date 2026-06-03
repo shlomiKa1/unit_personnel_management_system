@@ -5,9 +5,9 @@ from logger_config import logger
 def soldier_by_id(id_: int, soldiers: list[dict]):
     for soldier in soldiers:
         if soldier["id"] == id_:
-            logger.info(f"Find user with DI: {id_}")
+            logger.info("Find user with DI: '%s'", id_)
             return soldier
-    raise ValueError(f"ID: {id_} is not found")
+    raise ValueError(f"ID: '{id_}' is not found")
 
 
 def get_all_soldiers():

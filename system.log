@@ -66,3 +66,10 @@
 2026-06-02 18:35:52,462 | INFO | Find user with DI: 1
 2026-06-02 18:35:52,474 | INFO | Save 1 soldiers
 2026-06-02 18:35:52,475 | INFO | Delete soldier: 1
+2026-06-03 07:18:50,242 | INFO | Return 4 soldiers
+2026-06-03 07:18:50,244 | INFO | Find user with DI: 1
+2026-06-03 07:18:50,256 | INFO | Save 4 soldiers
+2026-06-03 07:18:50,256 | INFO | Update soldier
+2026-06-03 07:43:16,201 | INFO | Update soldier with ID: '8'
+2026-06-03 07:43:16,203 | INFO | Return '4' soldiers
+2026-06-03 07:43:16,204 | WARNING | ID: '8' is not exists
