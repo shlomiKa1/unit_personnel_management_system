@@ -35,13 +35,11 @@ def create_soldier(new_soldier: dict):
 
 def update_soldier(id_: int, updated_soldier: dict):
     soldiers = load_json()
+        
+    soldier = soldier_by_id(id_, soldiers)
+    soldier.update(updated_soldier)
     
-    for soldier in soldiers:
-        if soldier["id"] == id_:
-            soldier.update(updated_soldier)
-            save_json(soldiers)
-            return
-    raise ValueError
+    save_json(soldiers)
 
 
 def delete_soldier(id_: int):
