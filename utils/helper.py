@@ -3,9 +3,6 @@ from logger_config import logger
 
 
 def soldier_by_id(id_: int, soldiers: list[dict]):
-    # if not soldiers:
-    #     raise ("There is not soldiers in data")
-
     for soldier in soldiers:
         if soldier["id"] == id_:
             logger.info(f"Find user with DI: {id_}")
@@ -38,7 +35,7 @@ def update_soldier(id_: int, updated_soldier: dict):
         
     soldier = soldier_by_id(id_, soldiers)
     soldier.update(updated_soldier)
-    
+
     save_json(soldiers)
 
 
