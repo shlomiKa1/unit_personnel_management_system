@@ -10,7 +10,7 @@ def soldier_by_id(id_: int, soldiers: list[dict]):
         if soldier["id"] == id_:
             logger.info(f"Find user with DI: {id_}")
             return soldier
-    raise KeyError(f"ID: {id_} is not found")
+    raise ValueError(f"ID: {id_} is not found")
 
 
 def get_all_soldiers():
@@ -41,7 +41,7 @@ def update_soldier(id_: int, updated_soldier: dict):
             soldier.update(updated_soldier)
             save_json(soldiers)
             return
-    raise KeyError
+    raise ValueError
 
 
 def delete_soldier(id_: int):

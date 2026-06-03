@@ -28,7 +28,7 @@ def get_all_soldiers_endpoint():
 def get_soldier_endpoint(id_: int):
     try:
         return get_soldier(id_)
-    except KeyError:
+    except ValueError:
         logger.warning("ID is not exists")
         raise HTTPException(404, f"ID: {id_} is not found")
 
@@ -63,7 +63,7 @@ def update_soldier_endpoint(id_: int, new_soldier: dict):
         logger.info("Update soldier")
         return {"Message": f"Soldier {id_} update successfully"}
     
-    except KeyError:
+    except ValueError:
         logger.warning("ID is not exists")
         raise HTTPException(404, f"ID: {id_} is not found")
 
@@ -83,7 +83,7 @@ def delete_soldier_endpoint(id_: int):
         logger.info(f"Delete soldier: {id_}")
         return {"Message": f"Soldier {id_} deleted successfully"}
     
-    except KeyError:
+    except ValueError:
         logger.warning("ID is not exists")
         raise HTTPException(404, f"ID: {id_} is not found")
 
