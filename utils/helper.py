@@ -39,7 +39,7 @@ def create_soldier(new_soldier: Soldier):
 def update_soldier(id_: int, updated_soldier: Soldier):
     soldiers = load_json()
         
-    soldier = soldier_by_id(id_)
+    soldier = get_soldier_by_id(id_)
     soldier.update(updated_soldier)
 
     save_json(soldiers)
@@ -48,7 +48,7 @@ def update_soldier(id_: int, updated_soldier: Soldier):
 def delete_soldier(id_: int):
     soldiers = load_json()
 
-    soldier = soldier_by_id(id_, soldiers)
+    soldier = get_soldier_by_id(id_, soldiers)
     soldiers.remove(soldier)
     
     save_json(soldiers)
