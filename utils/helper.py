@@ -11,7 +11,6 @@ class Soldier(BaseModel):
 
 
 def soldier_by_id(id_: int, soldiers: Soldier):
-    """The """
     for soldier in soldiers:
         if soldier["id"] == id_:
             logger.info("Find user with DI: '%s'", id_)
