@@ -18,7 +18,7 @@ def get_all_soldiers_endpoint():
     
     except json.JSONDecodeError:
         logger.error("JSON file is empty")
-        raise HTTPException(500, "Invalid server error")
+        raise HTTPException(500, "Invalid Server Error")
     
 
 @app.get("/api/soldiers/{id_}", status_code=200)
@@ -36,7 +36,7 @@ def get_soldier_endpoint(id_: int):
     
     except json.JSONDecodeError:
         logger.error("JSON file is empty")
-        raise HTTPException(500, "Invalid server error")
+        raise HTTPException(500, "Invalid Server Error")
     
 
 @app.post("/api/soldiers", status_code=201)
@@ -72,7 +72,7 @@ def update_soldier_endpoint(id_: int, new_soldier: Soldier):
     
     except json.JSONDecodeError:
         logger.error("JSON file is empty")
-        raise HTTPException(500, "Invalid server error")
+        raise HTTPException(500, "Invalid Server Error")
     
 
 @app.delete("/api/soldiers/{id_}")
@@ -92,4 +92,4 @@ def delete_soldier_endpoint(id_: int):
 
     except json.JSONDecodeError:
         logger.error("JSON file is empty")
-        raise HTTPException(500, "Invalid server error")
+        raise HTTPException(500, "Invalid Server Error")
